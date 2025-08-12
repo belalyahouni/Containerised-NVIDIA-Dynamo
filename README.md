@@ -32,7 +32,8 @@ The container replicates a complete environment for inference (no local installa
 ## How to Get the Container
 
 You can pull the Docker image from Docker Hub:
-```docker pull belalyahouni/dynamo-vllm:latest
+```bash
+docker pull belalyahouni/dynamo-vllm:latest
 ```
 
 ---
