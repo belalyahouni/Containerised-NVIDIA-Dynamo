@@ -29,6 +29,14 @@ The container replicates a complete environment for inference (no local installa
 
 ---
 
+## How to Get the Container
+
+You can pull the Docker image from Docker Hub:
+```docker pull belalyahouni/dynamo-vllm:latest
+```
+
+---
+
 ## Requirements
 
 To use the container, you will need:
@@ -88,7 +96,7 @@ Results are saved to `output.jsonl`, which the script should read and print.
 ```bash
 docker run --gpus all \
   -v $(pwd)/vllm.py:/script.py \
-  dynamo-script:latest \
+  dynamo-vllm:latest \
   "What is the capital of Spain?"
 ```
 
@@ -96,7 +104,7 @@ docker run --gpus all \
 docker run --gpus all \
   -v $(pwd)/vllm.py:/script.py \
   -v $(pwd)/args.json:/args.json \
-  dynamo-script:latest \
+  dynamo-vllm:latest \
   "What is the capital of Spain?" \
   --extra-engine-args args.json
 ```
@@ -112,7 +120,5 @@ This optional JSON file defines backend-specific configuration.
 
 ## Notes
 
-- Backend model: `Qwen/Qwen3-0.6B`
-- Input must be in batch mode using `in=batch:prompt.json1`
-- Output file is saved as `output.jsonl`
+
 
