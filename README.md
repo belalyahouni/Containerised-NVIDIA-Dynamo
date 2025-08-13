@@ -17,7 +17,7 @@ The container is built with all required components to execute inference using `
 
 - **Installed software**:
 
-  - NVIDIA's `ai-dynamo`
+  - NVIDIA's `ai-dynamo` (version 0.3.2)
   - Required dependencies
   - `etcd` and `nats-server` (JetStream mode)
 
@@ -97,7 +97,7 @@ Results are saved to `output.jsonl`, which the script should read and print.
 ```bash
 docker run --gpus all \
   -v $(pwd)/vllm.py:/script.py \
-  dynamo-vllm:latest \
+  belalyahouni/dynamo-vllm:latest \
   "What is the capital of Spain?"
 ```
 
@@ -105,7 +105,7 @@ docker run --gpus all \
 docker run --gpus all \
   -v $(pwd)/vllm.py:/script.py \
   -v $(pwd)/args.json:/args.json \
-  dynamo-vllm:latest \
+  belalyahouni/dynamo-vllm:latest \
   "What is the capital of Spain?" \
   --extra-engine-args args.json
 ```
