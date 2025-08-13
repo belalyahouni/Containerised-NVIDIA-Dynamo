@@ -18,7 +18,7 @@ The container is built with all required components to execute inference using `
 - **Installed software**:
 
   - NVIDIA's `ai-dynamo`
-  - Required dependencies including `torch`, `xformers`, and `sglang`
+  - Required dependencies
   - `etcd` and `nats-server` (JetStream mode)
 
 - **Cloned Repositories**:
