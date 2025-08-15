@@ -44,6 +44,7 @@ To use the container, you will need:
 
 1. A **Python script** to be mounted into the container (e.g. `vllm.py`)
 2. (Optional) An **extra arguments JSON file** (e.g. `args.json`) for configuration
+3. Linux
 
 ---
 
